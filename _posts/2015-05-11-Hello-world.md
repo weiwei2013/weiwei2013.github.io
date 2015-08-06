@@ -10,7 +10,7 @@ tags: [welcome, hello, cpp]
 using namespace std;
 int main()
 {
-	cout << "hello. i'm David. This is my first post on this page, welcome to my blog!" << endl;
+	cout << "hello. i'm Vicky. This is my first post on this page, welcome to my blog!" << endl;
 	return 0;
 }
 {% endhighlight %}
