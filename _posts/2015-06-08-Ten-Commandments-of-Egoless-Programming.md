@@ -5,8 +5,7 @@ description: "CALayer的常用属性"
 modified: 2015-08-06
 ---
 
-<img src="http://i2.tietuku.com/e87d3f5b863b6648.jpg">
-<b>第一篇博文</b>
+<img src="http://i1.tietuku.com/1b1c4b15d1ffbd4d.jpg">
 <br>
 <b>anchorPint        和中心点possition重合的一个点，称之为“锚点”，锚点是的描述是相对于X，Y位置比例威严的默认是在图像中心点(0.5 , 0.5)的位置</b>	
 <br>
