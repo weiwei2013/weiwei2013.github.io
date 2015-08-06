@@ -1,12 +1,11 @@
 ---
 layout: page
-title: About me
+title: 关于我
 comments: false
 modified: 2015-08-01
 ---
 
-Hello, i'm <Vicky>
-a student in <b>Software Engineering</b> at the <b>University of Foreign Languages - Information Technology</b>, Ho Chi Minh City, Viet Nam. <br><br>
+Hello, <b>张薇薇</b> at the <b>University of Foreign Languages - Information Technology</b>, Ho Chi Minh City, Viet Nam. <br><br>
 I'm interested in <b>Android</b> apps/games development, also an amateur web developer and designer too. This page is just my blog, where i share everything about Tech, even my Life. Mostly for selfish reasons. I research things I find interesting, then write it on this public blog, where I can easily find and refer to later.
 <br>
 <br>
