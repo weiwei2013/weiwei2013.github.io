@@ -5,8 +5,12 @@ comments: false
 modified: 2015-08-01
 ---
 
-Hello, <b>张薇薇</b> at the <b>University of Foreign Languages - Information Technology</b>, Ho Chi Minh City, Viet Nam. <br><br>
-I'm interested in <b>Android</b> apps/games development, also an amateur web developer and designer too. This page is just my blog, where i share everything about Tech, even my Life. Mostly for selfish reasons. I research things I find interesting, then write it on this public blog, where I can easily find and refer to later.
+<b>关于我</b>
+<br>
+<br>
+<b>不约 不约 不约</b>
+<b>保密</b>
+
 <br>
 <br>
 <br>
