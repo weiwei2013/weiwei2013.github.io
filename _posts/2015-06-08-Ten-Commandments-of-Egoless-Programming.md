@@ -8,7 +8,27 @@ modified: 2015-08-06
 <img src="http://i.imgur.com/nQFuJBO.jpg">
 <b>第一篇博文</b>
 <br>
-<b>博客有了眉目了</b>
+<b>anchorPint  和中心点possition重合的一个点，称之为“锚点”，锚点是的描述是相对于X，Y位置比例威严的默认是在图像中心点(0.5 , 0.5)的位置
+backgroundColor 图层背景颜色
+borederColor   边框颜色
+borderWidth     边框宽
+bounds             图层大小
+contents            图层显示内容的大小和位置
+cornerRadius     圆角半径
+doubleSided       图层背面是否显示，默认为YES
+frame                   图层大小和位置，不支持隐士动画，所以CALayer中很少使用frame，通常使用bounds和position代替
+hidden               是否隐藏
+mask              图层蒙版
+maskToBounds   子图层是否剪切图层边界，默认为NO
+opacity         透明度，类似于UIView的alpha
+position   图层中心店位置，类似于UIView的center
+shadowColor       阴影颜色
+shadowOffset      阴影偏移量
+shadowOpacity   阴影透明度
+shadowPath        阴影模糊半径
+sublayers             子图层
+sublayerTransform  子图层形变
+transform    图层形变</b>
 <br>
 <b>1. Understand and accept that you will make mistakes.</b> The point is to find them early, before they make it into production. Fortunately, except for the few of us developing rocket guidance software at JPL, mistakes are rarely fatal in our industry, so we can, and should, learn, laugh, and move on.
 <br><br><b>2. You are not your code.</b> Remember that the entire point of a review is to find problems, and problems will be found. Don't take it personally when one is uncovered.
