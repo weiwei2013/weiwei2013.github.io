@@ -7,8 +7,8 @@ tags: [OpenGL, cpp]
 ---
 
 <img src="http://i.imgur.com/cfxb4wY.gif?1"><br>
-code here:
-<b>首先说一下什么是RunLoop？</b>
+code here:<br>
+<b>首先说一下什么是RunLoop？</b><br>
 <b>Run Loop 本身听起来就和它本身的名字很像。它是一个循环，你的线程进入并使用它来运行响应输入事件的事件处理程序。你的代码要提供实现循环部分的控制语句，换言之就是要有while或for循环语句来驱动run loop。在你的循环中，使用Run loop object 来运行事件</b>
 <b>那么在实际的开发中，简单的线程任务是不建议手动创建线程来实现的，因为手动创建并管理线程的生命周期比较麻烦，这么麻烦肿么办内，表怕，咱就用系统提供的一些异步方法(performSelectorInBackground:<#(SEL)#> withObject:<#(id)#>: 等)，或者是OperationQueue 后者是 Dispatch Queues等来实现。而只有当持续的异步任务需求时，我们才创建一个独立的生命周期可控的线程，而Run Loop就是控制线程生命周期并接收事件进行处理的机制。</b>
 <br>
@@ -35,7 +35,24 @@ code here:
     };
 }
 {% endhighlight %}
+<br>
+<b>上述代码，因为Run Loop没有添加任何输入源事件或Timer事件，会立刻返回，这样的话，线程其实是一直在无限循环空转中，虽然是让线程长驻不退出，但会一直占用着CPU的时间片，而没有实现资源的合理分配；在其他线程发送一个事件给该线程，系统会自动为Run Loop添加对应输入源或者Timer，让Run Loop正常运行。也可以手动添加输入源或者Timer来让Run Loop正常运行。添加了输入源或Timer事件的Run Loop在没有事件需要处理时，会让线程进行休眠，而不会占用着CPU的时间片。
+</b>
+<br>
+<b>正确的姿势</b><br>
 
+{% highlight cpp %}
+- (void)mains
+{
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+    while (!self.isCancelled && !self.isFinished) {
+        @autoreleasepool {
+            [runLoop runUntilDate:[NSDate dateWithTimeIntervalSinceNow:3]];
+        }
+    }
+}
+{% endhighlight %}
 
 
 
