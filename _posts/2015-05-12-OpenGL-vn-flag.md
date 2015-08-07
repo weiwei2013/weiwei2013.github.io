@@ -14,7 +14,7 @@ code here:<br>
 <br>
 <b>接下来 看一下介个Run Loop的官方定义:</b>
 <br>
-<p><code>Run loops are part of the fundamental infrastructure associated with threads. A run loop is an event processing loop that you use to schedule work and coordinate the receipt of incoming events. The purpose of a run loop is to keep your thread busy when there is work to do and put your thread to sleep when there is none.</code></p>
+<b><code>Run loops are part of the fundamental infrastructure associated with threads. A run loop is an event processing loop that you use to schedule work and coordinate the receipt of incoming events. The purpose of a run loop is to keep your thread busy when there is work to do and put your thread to sleep when there is none.</code></b>
 <img src="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Multithreading/Art/runloop.jpg"><br>
 <b>假设进程是一个工厂，线程是一个流水线，那么Run Loop就是流水线上的主管；当接工厂到商家订单，分配给这个流水线时，Run Loop就启动这个流水线，让流水线动起来，生产产品；而当订单的产品生产完毕时，Run Loop就会暂时停下流水线，节约资源。有Run Loop这个主管分配生产任务，流水线才不会因为无所事事被工厂干掉；而工厂转型或者产能升级等原因，不需要这个流水线时，就会辞掉Run Loop这个主管，不再接收任何的订单，即退出线程，把所有的资源释放。</b>
 <br>
